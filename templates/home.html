@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ChitChat</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo_nobg.jpg') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{{ url_for('static',filename='home.css') }}" type="text/css">
+        
+    </head>
+    
+    
+    
+    <body style="background-image: url('/static/bg-masthead.jpg');" id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <img src="{{ url_for('static', filename='logo.png') }}" width="100" height="80" >
+                <a class="navbar-brand" href="#page-top">Chit Chat</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('login')}}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('signup')}}">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+        
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Chit Chat</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free chatting app for you to stay connected with your friends and family.</h2>
+                        <a class="btn btn-primary" href="{{url_for('signup')}}">Get Chatting</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        
+        
+        <!-- About-->
+        <section class="about-section bg-black text-center" id="about">
+            <div class="container px-4 px-lg-5 nopadding">
+                <div class="row gx-4 gx-lg-5 justify-content-center nopadding">
+                    <h3 class="text-white mb-4">Built with Synergy</h3>
+                        <p class="text-white-50">
+                        Chit Chat was made possible by combined effort of our team.<br>
+                        You can share messages and files ( .txt , .jpg, .jpeg, .png, .jfif)</p> 
+
+                    <h3 class="text-white mb-4">What we Believe in </h3>
+                        <p class="text-white-50">"The right amount of complexity is whatever creates optimal simplicity"</p>
+
+                        
+                    <h3 class="text-white mb-4">For our Users </h3>
+                        <p class="text-white-50">"Come for our chat and stay for everything else"</p><br>
+                        
+                    </div>
+                </div>
+                
+        </section>
+        
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-2">Aakash Thatte</h4>
+                                <hr class="my-4 mx-auto" />
+                                <h6 class="text">ChitChat username: aakash</h6>
+                                <div class="small text-black-50"><a href="#!">thatteaakash@iitbhilai.ac.in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-2">Aman Vishnoi</h4>
+                                <hr class="my-4 mx-auto" />
+                                <h6 class="text">ChitChat username: aman</h6>
+                                <div class="small text-black-50"><a href="#!">amanvishnoi@iitbhilai.ac.in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Aneesh Tickoo</h4>
+                                <hr class="my-4 mx-auto" />
+                                <h6 class="text">ChitChat username: aneesh</h6>
+                                <div class="small text-black-50"><a href="#!">aneeshtickoo@iitbhilai.ac.in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Made with &#10084; by IC100 Group1, IIT Bhilai</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        
+        <script src="{{ url_for('static',filename='scripts.js') }}"></script>
+   
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    
+
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

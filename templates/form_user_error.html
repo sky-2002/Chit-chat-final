@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<title>Error ChitChat</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo_nobg.jpg') }}" />
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='style_error.css') }}" type="text/css">
+
+
+</head>
+
+<body style="background-image: url('/static/bg-masthead-filter2.jpg');background-repeat:no-repeat;background-size:cover">
+
+	<div id="notfound">
+		<div class="notfound">
+			<h2 style="font-size:45px">User does not exist!</h2><br>
+			<p style="font-size: 30px">You tried sending to a user which does not exist. Please check the username again. Usernames are case sensitive.</p>
+			<a href="#" onclick="history.go(-1)">Go Back</a>
+		</div>
+	</div>
+
+</body>
+
+</html>

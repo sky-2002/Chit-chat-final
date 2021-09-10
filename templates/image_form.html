@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Message</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo_nobg.jpg') }}" />
+        
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome.min.css') }}" type="text/css">
+    
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="{{ url_for('static',filename='message2.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='message.css') }}" type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}" type="text/css">
+    <script src="{{ url_for('static',filename='jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='utility.js') }}"></script>
+    <script src="{{ url_for('static',filename='u2.js') }}"></script>
+
+</head>
+<body>
+
+	<div class="bg-contact100" style="background-image: url('/static/bg-masthead.jpg');">
+		<div class="container-contact100">
+			<div class="wrap-contact100">
+				<div class="contact100-pic js-tilt" data-tilt>
+					<img src="{{ url_for('static', filename='img-01.png') }}" alt="IMG">
+				</div>
+
+				<form method="POST" action="{{url_for('image_process',username=username)}}" enctype="multipart/form-data" class="contact100-form validate-form" >
+					<span class="contact100-form-title">
+						Send your message with attachment
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Name is required">
+						
+                        <input class="input100" type="text" name="to" placeholder="Username">
+						
+                        <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						
+                        <input class="input100" type="text" name="subject" placeholder="Subject">
+						
+                        <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Message is required">
+						
+                        <textarea class="input100" name="message" placeholder="Message"></textarea>
+						
+                        <span class="focus-input100"></span>
+					</div>
+
+                    <input type="file" name="file" id="uploaded_file"><br>
+
+					<div class="container-contact100-form-btn">
+						<input type="submit" class="contact100-form-btn" value="SEND"  style="margin-bottom: 10px;"/>
+                        <a class="contact100-form-btn" href="{{url_for('dashboard',username=username,logged_in=true)}}">Back to Dashboard</a>
+                    </div>
+						
+                    
+				</form>
+                
+                <div id="confirmation">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-2" id="output_div">
+                        </div>
+                    </div>
+                 </div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
